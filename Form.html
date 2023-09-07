@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            background-color: black;
+        }
+        .sidebar{
+            position: fixed;
+            left: 0;
+            width: 200px;
+            height: 300px;
+            margin-top: 00px;
+            cursor: pointer;
+            border: 2px solid aqua;
+            border-radius: 20px;
+            transition: all 1s;
+            box-shadow: 5px 5px 5px aqua;
+        }
+        header,h1{
+            font-size: 2rem;
+            margin-left: 10px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            width: 170px;
+            height: 50px;
+            background-color: orange;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        header{
+            margin-top: 100px;
+        }
+        ul li{
+            padding: 10px;
+            margin: 10px;
+            padding-bottom: 20px;
+        }
+        ul li a{
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            padding-bottom: 20px;
+            border-radius: 5px;
+        }
+        ul li a:hover{
+            transition: all 3s;
+            transition-duration: 5s;
+            text-decoration: underline;
+            color: aqua;
+            transform:rotateX(-45deg)
+        }
+        ul li a i{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #sign-up{
+            color: white;
+            position: absolute;
+            top: 50px;
+            left: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid aqua;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px aqua ;
+        }
+        .Another{
+            color: white;
+            text-align: center;
+            margin: 5px;
+            cursor: pointer;
+        }
+        input{
+            width: 300px;
+            height: 80px;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .One{
+            font-size: 30px;
+            color: white;
+            border: 2px solid aqua;
+            box-shadow: 5px 5px 10px rgb(26, 70, 70);
+            cursor: pointer;
+        }
+        .One:hover{
+            transition: all 1s;
+            font-size: 35px;
+            box-shadow: 5px 5px 10px rgb(0, 255, 255);
+        }
+        .Two{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(65, 65, 182);
+            border: 1px solid blue;
+            cursor: pointer;
+            /* background-color: red; */
+            
+        }
+        .Two:hover{
+            background-color: rgb(6, 6, 194);
+        }
+        #Next{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        #Next i{
+            font-size: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .Forget{
+            padding: 10px;
+            height: auto;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 1px solid white;
+            box-shadow: 2px 2px 2px white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>Menu Bar</header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class='bx bx-home-alt' style='color:#ffffff'></i>Home</a></li>
+            <li><a href="#"><i class='bx bxs-contact' style='color:#ffffff' ></i>Contact</a></li>
+            <li><a href="#"><i class='bx bxs-memory-card' style='color:#ffffff'></i>About</a></li>
+            <li><a href="#"><i class='bx bx-server' style='color:#ffffff' ></i>Services</a></li>
+        </ul>
+    </div>
+    <section id="sign-up">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Name" class="Another One">
+        <input type="password" placeholder="Passward" class="Another One">
+        <button class="Another Two"  value="Submit">Login</button>
+        <div id="Next">
+            <button class="Another Forget">Forget the passward ?</button>
+            <button class="Another Forget"><i class='bx bxl-facebook-circle' style="color: rgb(58, 58, 233);"></i>Continue with facebook</button>
+            <button class="Another Forget"><i class='bx bxl-instagram' style="color:rgb(206, 54, 107)"></i>Continue with Instagram</button>
+            <button class="Another Forget"><i class='bx bxl-google' style="color:red"></i>Continue with Google</button>
+        </div>
+        <script>
+            document.querySelector("header").addEventListener("click", function () {
+                var left = window.getComputedStyle(document.querySelector(".sidebar")).left;
+        
+                if (left === "0px") {
+                    document.querySelector(".sidebar").style.left = "-250px";
+
+                } else if (left === "-250px") {
+                    document.querySelector(".sidebar").style.left = "0px";
+                }
+            });
+        </script>
+        
+        
+    </section>
+</body>
+</html>

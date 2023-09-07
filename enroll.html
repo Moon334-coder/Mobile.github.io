@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,400;1,200&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Roboto:ital,wght@1,900&display=swap"
+    rel="stylesheet">
+  <title>Enroll Now</title>
+  <style>
+    * {
+      list-style: none;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container label {
+      font-size: 25px;
+      margin: 15px;
+    }
+
+    .size {
+      width: 30%;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 4px 4px aqua;
+      background-color: rgb(10, 96, 96);
+      color: rgba(0, 0, 0, 0.886);
+      font-weight: bolder;
+      color: white;
+    }
+
+    .size-small {
+      width: 20%;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 4px 4px aqua;
+      color: white;
+      background-color: rgb(10, 96, 96);
+      color: rgba(0, 0, 0, 0.867);
+      font-weight: bolder;
+    }
+
+    input {
+      background-color: transparent;
+      outline: none;
+    }
+
+    input:hover {
+      animation: slideBackground 2s forwards;
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      transition: all 1s;
+    }
+
+    .less {
+      background-color: white;
+      border: 1px solid purple;
+      color: white;
+      width: 10%;
+      padding: 15px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      color: rgba(0, 0, 0, 0.886);
+      font-weight: bolder;
+    }
+
+    .less:hover {
+      background-color: purple;
+      font-size: 15px;
+      transition: all 1s ease-out;
+      color: white;
+    }
+
+    #padding {
+      padding: 30px;
+      margin: 30px;
+    }
+
+    .container1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30%;
+    }
+
+    h1 {
+      display: block;
+      text-align: center;
+      /* background-color: aqua; */
+      width: 30%;
+      height: 50%;
+      border-radius: 50px;
+      font-size: 50px;
+      font-family: 'Noto Serif', serif;
+    }
+
+    h1:hover {
+      color: blueviolet;
+      transition: all 1s;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin-top: 50px;
+    }
+
+    #navbar a {
+      font-size: 20px;
+      text-decoration: none;
+      padding-left: 60px;
+      padding-right: 60px;
+      color: purple;
+      text-transform: uppercase;
+    }
+    #navbar a i{
+      color: white;
+      font-size: larger;
+    }
+    #navbar a:hover {
+      color: aqua;
+      transition: all 1s;
+    }
+    #navbar:hover a:not(:hover) {
+      transition: all 1s;
+      filter: blur(1.9px);
+    }
+    .shadow {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        background: aqua;
+        width: 20em;
+        height: 10em;
+        box-shadow: 50px 120px 100px 10px aqua, 50px 120px 200px 10px aqua;
+        filter: blur(200px);
+      }
+      option{
+        background-color: white;
+      }
+      .ColorChanger{
+        font-size: 50px;
+        color: purple;
+      }
+      .ColorChanger i:hover{
+        color:darkgoldenrod;
+        cursor: pointer;
+        /* background-color: white; */
+      }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+    </nav>
+    <button class="ColorChanger"><i class='bx bx-palette'></i></button>
+  </header>
+  
+
+    <div class="container1">
+      <h1>Enroll now</h1>
+    </div>
+    <form action="Backend" id="shadow">
+      <div id="container">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" id="name" class="size" required="required" />
+        <label for="age">Age</label>
+        <input type="number" placeholder="Enter your age" id="age" class="size" required="required" />
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" class="size" />
+        <div>
+          <label for="mygender">Gender :
+            Male<input type="radio" name="MyGender" id="padding" /> Female<input type="radio" name="MyGender"
+              id="padding" />
+          </label>
+        </div>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your email" id="email" class="size" />
+        <label for="f-name">Father Name</label>
+        <input type="text" placeholder="Enter your Father's name" id="f-name" class="size" />
+        <label for="profession">Profession</label>
+        <input type="text" placeholder="Enter your father's profession" id="profession" class="size" />
+        <label for="program">Enter Program</label>
+        <select name="program" id="program" class="size-small">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JS</option>
+          <option value="sql">SQL</option>
+          <option value="c++">C++</option>
+        </select>
+
+        <label for="Duration">Enter Duration</label>
+        <select name="" id="Duration" class="size-small">
+          <option value="">4 Months</option>
+          <option value="">8 Months</option>
+          <option value="">10 Months</option>
+          <option value="">1 year</option>
+        </select>
+        <label for="Check">Have you read all instructions
+          <input type="checkbox" name="Check" id="Check">
+        </label>
+
+        <button class="less">Submit</button>
+        <button class="less" value="Reset">Reset</button>
+    </form>
+     <div class="shadow"></div>
+     <script>
+      var color = ["#000000", "#fcfcfc"];
+      var i = 0;
+      document.querySelector("button i").addEventListener("click", function() {
+        if (i == 0) {
+          document.querySelector("body").style.background = color[i];
+          document.querySelector("body").style.color = color[i === 0 ? 1 : 0];
+          i++;
+        } else if (i == 1) {
+          document.querySelector("body").style.background = color[i];
+          document.querySelector("body").style.color = color[i === 0 ? 1 : 0];
+          i--;
+        }
+      });
+    </script>
+    
+</body>
+
+</html>
